@@ -11,10 +11,18 @@ public class TableController {
 
 
 
+    public TableController(String name){
+        //Player1's name going to be selected by the user.
+        this.player1 = new Player(name);
+        this.bot1 = new Player("Bot1");
+        this.bot2 = new Player("Bot2");
+        this.bot3 = new Player("Bot3");
+        Deck deck = new Deck();//Firstly, deck is going to be created here and till the other games starts.
 
+    }
     public void startGame(){
-        Deck deck = new Deck();
-        //First deck is going to be created here and till the other games starts.
+
+
 
 
 
