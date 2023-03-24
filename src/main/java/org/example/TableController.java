@@ -30,5 +30,11 @@ public class TableController {
     private void distributeCards(){
         //distributes 13 card every game in the beginning.
     }
+    private void checkWinner(){
+        //This function going to determine who won the round, actually. After all the players made their moves this function
+        //going to look the deck in the table (which contains 4 card) and determine who have played the winner card.
+        //And add point to this player
+    }
+
 
 }
