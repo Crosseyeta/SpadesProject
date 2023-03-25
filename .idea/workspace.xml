@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="Some of the classes have been improved. Beginning logic of the game implemented but needs improvement in &quot;GameController&quot; class.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Node.java" afterDir="false" />
+    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient.">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Node.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableDeck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +84,9 @@
       <workItem from="1679254605239" duration="185000" />
       <workItem from="1679304754790" duration="2029000" />
       <workItem from="1679505555944" duration="2584000" />
-      <workItem from="1679601661082" duration="4237000" />
+      <workItem from="1679601661082" duration="4625000" />
+      <workItem from="1679670627420" duration="692000" />
+      <workItem from="1679769381064" duration="3184000" />
     </task>
     <task id="LOCAL-00001" summary="Starter">
       <created>1679254626950</created>
@@ -107,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679604104221</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient.">
+      <created>1679665967120</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679665967120</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +126,7 @@
     <MESSAGE value="Starter" />
     <MESSAGE value="Almost all necessary classes added. But methods need improvement." />
     <MESSAGE value="Some of the classes have been improved. Beginning logic of the game implemented but needs improvement in &quot;GameController&quot; class." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some of the classes have been improved. Beginning logic of the game implemented but needs improvement in &quot;GameController&quot; class." />
+    <MESSAGE value="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient." />
+    <option name="LAST_COMMIT_MESSAGE" value="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient." />
   </component>
 </project>
