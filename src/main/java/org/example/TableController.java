@@ -24,10 +24,9 @@ public class TableController {
     }
     public void startGame(){
 
-    //starts game by using private functions included in THIS class.
+        //starts game by using private functions included in THIS class.
         //take the input of the player's name.
         //player1.setName(name);
-
         //WORK EXAMPLE//
         //deck.shuffle
         //distributeCards
@@ -69,8 +68,8 @@ public class TableController {
     private void endGame(){
         //when setGameWinner function implemented just after it this function going to work and sets everything to the normal.
         //For example bids going to be deleted and also points of each player.
-    }
 
+    }
 
 
 }

@@ -30,19 +30,22 @@ public class Player {
     }
 
     public void addPoint(int num){
+        // @param int num which is going to be added to the current point of player
         //add points to the player
     }
     public void deletePoint(int num){
+        // @param int num which is going to be deleted to the current point of player
         //deletes point from the player
     }
 
     public int getBids() {
-        //in order to show your bid to the screen
+        // @return int in order to print bids to the console.
         return bids;
     }
 
     public void setBids(int bids) {
-        //Each player going to bid with this function
+        //@param int bids when the game starts each player must deal with some bids in order to start to game.
         this.bids = bids;
     }
+
 }

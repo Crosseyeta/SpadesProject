@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="How game works explained in the comments some necessary methods implemented need minor improvement before the write actual codes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Node.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableDeck.java" afterDir="false" />
     </list>
@@ -59,19 +59,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -86,7 +87,7 @@
       <workItem from="1679505555944" duration="2584000" />
       <workItem from="1679601661082" duration="4625000" />
       <workItem from="1679670627420" duration="692000" />
-      <workItem from="1679769381064" duration="3184000" />
+      <workItem from="1679769381064" duration="7478000" />
     </task>
     <task id="LOCAL-00001" summary="Starter">
       <created>1679254626950</created>
@@ -116,17 +117,36 @@
       <option name="project" value="LOCAL" />
       <updated>1679665967120</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="How game works explained in the comments some necessary methods implemented need minor improvement before the write actual codes">
+      <created>1679775602101</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679775602101</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Starter" />
     <MESSAGE value="Almost all necessary classes added. But methods need improvement." />
     <MESSAGE value="Some of the classes have been improved. Beginning logic of the game implemented but needs improvement in &quot;GameController&quot; class." />
     <MESSAGE value="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient." />
-    <option name="LAST_COMMIT_MESSAGE" value="LinkedList and Node (empty) classed added.Most of the game logic completed but need enhancement especially game controller class. Also , linkedlist class need to be implemented in order to make game proper and efficient." />
+    <MESSAGE value="How game works explained in the comments some necessary methods implemented need minor improvement before the write actual codes" />
+    <option name="LAST_COMMIT_MESSAGE" value="How game works explained in the comments some necessary methods implemented need minor improvement before the write actual codes" />
   </component>
 </project>
