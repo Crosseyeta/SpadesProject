@@ -63,15 +63,12 @@ public class Deck {
   //There will be 52 card.Each one of them created just for once when we begin the game.
   public Deck(){
     //Each card going to be initiliazed here by giving its power(number actually) to each of them. For example look the Spade2
-    this.spade = new Suit("Spade",2);
-    this.diamond = new Suit("Diamond",1);
-    this.hearts = new Suit("Hearts",1);
-    this.clubs = new Suit("Clubs",1);
-    this.Spade2 = new Card("2",spade,2);//LOOK HERE FOR INSTANCE
+
     //All the cards are going to be implemented to the deck here just for once.
   }
   public void shuffle(){
     //this function shuffles the deck briefly.
+    //by using linkedlist functions which are implemented in linkedlist class
   }
 
 
