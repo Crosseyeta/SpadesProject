@@ -2,7 +2,7 @@ package org.example;
 
 public class Deck {
   // This class has all the card in the deck as a list and is going to control deck itself.
-  private Suit spade;
+  /*private Suit spade;
   private Suit diamond;
   private Suit hearts;
   private Suit clubs;
@@ -57,7 +57,13 @@ public class Deck {
   private Card ClubsJack;
   private Card ClubsQuenn;
   private Card ClubsKing;
-  private Card ClubsAce;
+  private Card ClubsAce;*/
+  private LinkedList deck;
+  private Suit spade;
+  private Suit heart;
+  private Suit diamond;
+  private Suit club
+          ;
 
 
   //There will be 52 card.Each one of them created just for once when we begin the game.
@@ -65,11 +71,33 @@ public class Deck {
     //Each card going to be initiliazed here by giving its power(number actually) to each of them. For example look the Spade2
 
     //All the cards are going to be implemented to the deck here just for once.
+    this.deck = new LinkedList();
+    this.spade = new Suit(1);
+    this.diamond = new Suit(0);
+    this.club = new Suit(0);
+    this.heart = new Suit(0);
+    for(int i = 0;i<13;i++){
+      deck.insertFirst(new Card(spade,i));
+    }
+    for(int i = 0;i<13;i++){
+      deck.insertFirst(new Card(diamond,i));
+    }
+    for(int i = 0;i<13;i++){
+      deck.insertFirst(new Card(heart,i));
+    }
+    for(int i = 0;i<13;i++){
+      deck.insertFirst(new Card(club,i));
+    }
+
   }
   public void shuffle(){
     //this function shuffles the deck briefly.
     //by using linkedlist functions which are implemented in linkedlist class
   }
+  public LinkedList getDeck(){
+    return this.deck;
+  }
+
 
 
 

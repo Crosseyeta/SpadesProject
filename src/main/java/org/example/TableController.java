@@ -1,4 +1,7 @@
 package org.example;
+import java.util.Scanner;
+import java.math.*;
+
 /* IMPORTANT !!!!!!!!
 
      This class actually started of the game so these reminder under this comment section is dramatically important
@@ -25,18 +28,27 @@ public class TableController {
     private Bot bot2;
     private Bot bot3;
     private TableDeck tableDeck;
-    public boolean broken;//in order to control if it is game broken or not to. determine for the bots which card they are going to use.
+    private Scanner sc ;
+    public static boolean broken;//in order to control if it is game broken or not to. determine for the bots which card they are going to use.
 
 
 
     public TableController(){
-        //Player1's name going to be selected by the user.
+        this.deck =  new Deck();
+        this.player1 = new Player("initial",1);
+        this.bot1 = new Bot("Bot1",2);
+        this.bot2 = new Bot("Bot2",3);
+        this.bot3 = new Bot("Bot3",4);
+        sc = new Scanner(System.in);
 
+
+        //Player1's name going to be selected by the user.
         //Firstly, deck is going to be created here when this constructor called
 
 
     }
     public void startGame(){
+
 
         //starts game by using private functions included in THIS class.
         //take the input of the player's name.
@@ -54,6 +66,8 @@ public class TableController {
         //startRound(->player..useCard // player.addPoint / player.deletePoint)
         //endRound(checkRoundWinner() works inside of it.. Also, tableDeck.clear() in order to begin new round with no card on the table)
 
+        System.out.println("Welcome to the spade game.To start the game please write your username");
+        player1.setName(sc.next());
 
 
 
@@ -62,6 +76,11 @@ public class TableController {
     }
     private void startSet(){
         //starts the set of the game(set means each game which played with initial 52 cards deck. Also, each set has 13 round)
+        this.broken = false;
+        deck.shuffle();
+        distributeCards();
+        setBids();
+        startRound();
 
     }
     private void endSet(){
@@ -75,6 +94,10 @@ public class TableController {
     private void setBids(){
         //when game starts all the player must bid his guess.
         //AFTER THE DISTRBITUON OF CARDS
+        System.out.println("Please enter your bid by looking at your spades.(Enter int value)");
+        player1.setBids(sc.nextInt());
+        //Bots bids are complicated
+
     }
     private void distributeCards(){
 
