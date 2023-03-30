@@ -1,5 +1,5 @@
 package org.example;
-
+import java.lang.Math;
 public class Deck {
   // This class has all the card in the deck as a list and is going to control deck itself.
   /*private Suit spade;
@@ -72,10 +72,10 @@ public class Deck {
 
     //All the cards are going to be implemented to the deck here just for once.
     this.deck = new LinkedList();
-    this.spade = new Suit(1);
-    this.diamond = new Suit(0);
-    this.club = new Suit(0);
-    this.heart = new Suit(0);
+    this.spade = new Suit("Spade",1);
+    this.diamond = new Suit("Diamond",0);
+    this.club = new Suit("Club",0);
+    this.heart = new Suit("Heart",0);
     for(int i = 0;i<13;i++){
       deck.insertFirst(new Card(spade,i));
     }
@@ -93,12 +93,45 @@ public class Deck {
   public void shuffle(){
     //this function shuffles the deck briefly.
     //by using linkedlist functions which are implemented in linkedlist class
+    //In this for look we can change 26 here it depends us in order to make more lucky concrete shuffle function we can increase this number but not much in order to be efficient
+    /*int max1 = 4;
+    int min = 1;
+    int max2 = 13;
+    int range1 = max1 - min +1 ;
+    int range2 = max2 - min + 1;*/
+    for(int i = 0 ;i<26;i++){
+      //we are going to shuffle this by select two card in specific index of deck by giving them random index using random.
+      int a = (int)(Math.random()*5) ;
+      int b = (int)(Math.random()*5) ;
+      int c = (int)(Math.random()*14) ;
+      int d = (int)(Math.random()*14) ;
+      System.out.println(b*d);
+      System.out.println(a*c);
+      change(this.deck.getCardI(a*c),this.deck.getCardI(b*d));
+    }
+
+
+
+  }
+  private void change(Card card1,Card card2){
+    //This function going to be used in shuffle.What it does briefly is change 2 card attributes without not touching of next card there where they were before the change.
+    int card1Power = card1.getPower();
+    Suit card1Suit = card1.getSuit();
+    card1.setPower(card2.getPower());
+    card1.setSuit(card2.getSuit());
+    card2.setSuit(card1Suit);
+    card2.setPower(card1Power);
   }
   public LinkedList getDeck(){
     return this.deck;
   }
 
-
+  public void showAllDeck(){
+    int size  = this.deck.numberOfElements();
+    for(int i = 0;i<size;i++){
+      System.out.println(deck.getCardI(i).toString());
+    }
+  }
 
 
 }

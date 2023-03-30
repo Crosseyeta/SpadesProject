@@ -68,6 +68,7 @@ public class TableController {
 
         System.out.println("Welcome to the spade game.To start the game please write your username");
         player1.setName(sc.next());
+        distributeCards();
 
 
 
@@ -88,7 +89,7 @@ public class TableController {
         // if somebody's point is above 500 also determines the winner.
 
     }
-    private void chechSetWinner(){
+    private void checkSetWinner(){
         //when the 13th round ends going to add points or delete points from player who made their guesses well or bad.
     }
     private void setBids(){
@@ -98,11 +99,34 @@ public class TableController {
         player1.setBids(sc.nextInt());
         //Bots bids are complicated
 
+
     }
     private void distributeCards(){
 
         //distributes 13 card every game in the beginning.
-        //Takes card from Main Deck and distribute to each player's deck one by one(Because its already shuffled)
+        //Takes card from Main Deck and distribute to each player's deck one by one(Because its already shuffled also going to distrbuted randomly)
+        int k = 0;
+        for(int i = 0;i<13;i++){
+            if(k==0){
+                int index = (k*13)+(int)(Math.random()*13*(k+1));
+                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+            }else if(k==1){
+                int index = (k*13)+(int)(Math.random()*13*(k+1));
+                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+            }else if(k==2){
+                int index = (k*13)+(int)(Math.random()*13*(k+1));
+                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+            }else if(k==3){
+                int index = (k*13)+(int)(Math.random()*13*(k+1));
+                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+            }
+        }
+        System.out.println("çalışşş");
+        System.out.println(player1.getPlayerDeck().toString());
+
+
+
+
     }
     private void startRound(){
         //starts round by distributing card to each player also controls to players point.

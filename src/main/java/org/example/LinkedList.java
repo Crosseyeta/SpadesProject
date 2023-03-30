@@ -12,13 +12,15 @@ public class LinkedList {
     public boolean isEmpty(){
         /*
         @return if it is empty return true if not return false
-
          */
         return head == null;
     }
     public Card getHead(){
         return head;
+        //If it has return value then it is going to be head value data in order to maximazi the value
+        //IDK why is it like this bv
     }
+
 
     public void insertFirst(Card newCard) {
         /*
@@ -90,13 +92,13 @@ public class LinkedList {
             index++;
             tmp = tmp.getNext();
         }
+
         return null;
     }
 
     public int numberOfElements(){
         /*
         @return size of list briefly
-
          */
         Card tmp = head;
         int count = 0;
