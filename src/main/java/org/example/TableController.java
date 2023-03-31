@@ -106,22 +106,22 @@ public class TableController {
         //distributes 13 card every game in the beginning.
         //Takes card from Main Deck and distribute to each player's deck one by one(Because its already shuffled also going to distrbuted randomly)
         int k = 0;
-        for(int i = 0;i<13;i++){
+        for(int i = 0;i<13;i++){//may can be with switch case;
             if(k==0){
-                int index = (k*13)+(int)(Math.random()*13*(k+1));
-                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                k++;
             }else if(k==1){
-                int index = (k*13)+(int)(Math.random()*13*(k+1));
-                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                k++;
             }else if(k==2){
-                int index = (k*13)+(int)(Math.random()*13*(k+1));
-                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                k++;
             }else if(k==3){
-                int index = (k*13)+(int)(Math.random()*13*(k+1));
-                player1.getPlayerDeck().addCard(deck.getDeck().getCardI(index));
+                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                k= 0 ;
             }
         }
-        System.out.println("çalışşş");
+
         System.out.println(player1.getPlayerDeck().toString());
 
 

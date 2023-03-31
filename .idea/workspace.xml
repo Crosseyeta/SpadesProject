@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" afterDir="false" />
+    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="shuffle distribute and linkedlist logic implemented. Got stuck in shuffle and distribute.Also getIndex method not working sometimes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Deck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Suit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,7 +87,7 @@
       <workItem from="1679769381064" duration="8239000" />
       <workItem from="1680007995645" duration="10812000" />
       <workItem from="1680114387619" duration="6845000" />
-      <workItem from="1680189089051" duration="9148000" />
+      <workItem from="1680189089051" duration="11391000" />
     </task>
     <task id="LOCAL-00001" summary="Starter">
       <created>1679254626950</created>
@@ -150,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680122956360</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="shuffle distribute and linkedlist logic implemented. Got stuck in shuffle and distribute.Also getIndex method not working sometimes.">
+      <created>1680215637669</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1680215637669</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,6 +178,7 @@
     <MESSAGE value="Little changes made about function parameters.Changed the game logic a bit. Game logic must be review till the end of the tomorrow." />
     <MESSAGE value="the structure of the project is done for now.BUT , while writing the code implement some necessary methods if there is" />
     <MESSAGE value="Wrote some function codes. Also constructors,getter and setters are almost done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote some function codes. Also constructors,getter and setters are almost done." />
+    <MESSAGE value="shuffle distribute and linkedlist logic implemented. Got stuck in shuffle and distribute.Also getIndex method not working sometimes." />
+    <option name="LAST_COMMIT_MESSAGE" value="shuffle distribute and linkedlist logic implemented. Got stuck in shuffle and distribute.Also getIndex method not working sometimes." />
   </component>
 </project>

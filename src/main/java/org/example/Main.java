@@ -7,8 +7,8 @@ public class Main {
     deck.shuffle();
     System.out.println("Shuffled");
     deck.showAllDeck();
-    TableController sea = new TableController();
-    sea.startGame();
+    //TableController sea = new TableController();
+        //sea.startGame();
 
     }
 }
