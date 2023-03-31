@@ -46,8 +46,7 @@ public class Deck {
       int b = (int)(Math.random() * range1) + 1;
       int c = (int)(Math.random() * range2) + 1;
       int d = (int)(Math.random() * range2) + 1;
-      System.out.println(b*d);
-      System.out.println(a*c);
+
       change(this.deck.getCardI(a*c-1),this.deck.getCardI(b*d-1));
     }
 

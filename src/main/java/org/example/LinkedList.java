@@ -47,6 +47,7 @@ public class LinkedList {
     public void deleteFirst() {
         /*
         delete first card in the list
+        @yeter knk
          */
         head = head.getNext();
         if (head == null){

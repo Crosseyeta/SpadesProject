@@ -6,12 +6,12 @@ public class PlayerDeck {
         // round and decrease set by set.
         private LinkedList playerDeck;
         public PlayerDeck(){
-            playerDeck = new LinkedList();
+           this.playerDeck = new LinkedList();
         }
         public void addCard(Card card){
             //@param Card card which is determined by the distribute function in the GameController
             //In the beginning of the game each player's deck going to be determined by this and distribute function.
-            playerDeck.insertFirst(card);
+            this.playerDeck.insertFirst(card);
 
         }
         public void useCard(int cardIndex){

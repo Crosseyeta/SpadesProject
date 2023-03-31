@@ -1,6 +1,6 @@
 package org.example;
 import java.util.Scanner;
-import java.math.*;
+
 
 /* IMPORTANT !!!!!!!!
 
@@ -67,7 +67,9 @@ public class TableController {
         //endRound(checkRoundWinner() works inside of it.. Also, tableDeck.clear() in order to begin new round with no card on the table)
 
         System.out.println("Welcome to the spade game.To start the game please write your username");
-        player1.setName(sc.next());
+        this.player1.setName(sc.next());
+        //this.deck.shuffle();
+        this.deck.showAllDeck();
         distributeCards();
 
 
@@ -105,19 +107,37 @@ public class TableController {
 
         //distributes 13 card every game in the beginning.
         //Takes card from Main Deck and distribute to each player's deck one by one(Because its already shuffled also going to distrbuted randomly)
+        // when distributing it going to take one card from 0-13 and then 13-26 , 26-39 , 39-52 with this way each player's deck be more complicated
         int k = 0;
+
+        System.out.println(this.deck.getDeck().toString());
+        for(int a = 0;a<15;a++){
+            System.out.println(this.deck.getDeck().getCardI(a));
+        }
+        System.out.println(this.deck.getDeck().getCardI(14));
+        System.out.println("ikinci for");
         for(int i = 0;i<13;i++){//may can be with switch case;
+
+
             if(k==0){
-                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                /*Card newCard = this.deck.getDeck().getCardI(k*13+i);
+                System.out.println(newCard);*/
+                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
                 k++;
-            }else if(k==1){
-                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+            }if(k==1){
+                System.out.println(k*13+i);
+                System.out.println(this.deck.getDeck().getCardI(k*13+i));
+                System.out.println(this.deck.getDeck().getCardI(14));
+
+                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
                 k++;
             }else if(k==2){
-                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                Card newCard = this.deck.getDeck().getCardI(k*13+i);
+                this.player1.getPlayerDeck().addCard(newCard);
                 k++;
             }else if(k==3){
-                player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                Card newCard = this.deck.getDeck().getCardI(k*13+i);
+                this.player1.getPlayerDeck().addCard(newCard);
                 k= 0 ;
             }
         }
