@@ -4,7 +4,7 @@ public class Player {
     private String name;
     private int point;
     private int bids;
-    private PlayerDeck deck;
+    private PlayerDeck playerDeck;
     // each Player's bids going to be determined beginning of the game;
     private int playOrder;
     private int roundWinCount;
@@ -26,7 +26,7 @@ public class Player {
     public Player(String name,int playOrder){
         this.name = name;
         this.playOrder = playOrder;
-        this.deck = new PlayerDeck();
+        this.playerDeck = new PlayerDeck();
         //When first created each one of player's deck going to have zero card in it.And then 13 card will be distributed each one of them
 
     }
@@ -52,7 +52,7 @@ public class Player {
 
     public PlayerDeck getPlayerDeck() {
         //in order to control the player deck in GameController class.
-        return this.deck;
+        return this.playerDeck;
     }
 
     public void deletePoint(int num){

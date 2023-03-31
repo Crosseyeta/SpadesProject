@@ -122,13 +122,12 @@ public class TableController {
             if(k==0){
                 /*Card newCard = this.deck.getDeck().getCardI(k*13+i);
                 System.out.println(newCard);*/
-                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI((k*13)+i));
+                System.out.println(this.player1.getPlayerDeck().getPlayerDeckList().toString());
                 k++;
             }if(k==1){
-                System.out.println(k*13+i);
-                System.out.println(this.deck.getDeck().getCardI(k*13+i));
-                System.out.println(this.deck.getDeck().getCardI(14));
-
+                System.out.println(this.deck.getDeck().toString()+"çalış amk ");
+                System.out.println(this.deck.getDeck().getCardI(0));
                 this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
                 k++;
             }else if(k==2){
@@ -138,7 +137,7 @@ public class TableController {
             }else if(k==3){
                 Card newCard = this.deck.getDeck().getCardI(k*13+i);
                 this.player1.getPlayerDeck().addCard(newCard);
-                k= 0 ;
+                k= 0;
             }
         }
 
@@ -160,6 +159,7 @@ public class TableController {
         //going to look the deck in the table (which contains 4 card) and determine who have played the winner card.
         //And roundcount point to this player
         //IMPORTANT!!! Look at the comment at the TableDeck class.(Explains how this function work with tableDeck)
+
     }
 
 
