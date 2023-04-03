@@ -8,6 +8,11 @@ public class Bot extends Player{
 
     }
     public Bot(String name,int playOrder){
-        super();
+
+    }
+    public void AutoBid(){
+        for(int i =0;i<13;i++){
+            super.playerDeck();
+        }
     }
 }

@@ -29,6 +29,7 @@ public class LinkedList {
         if (tail == null) {
             tail = newCard;
         }
+
         newCard.setNext(head);
         head = newCard;
     }
@@ -62,7 +63,20 @@ public class LinkedList {
     }
 
 
-
+    public Card searchSuit(Suit suit) {
+        /*
+         @param the value that we want to find in list
+         @return the node that include the value that we want
+         */
+        Card tmp = head;
+        while (tmp != null) {
+            if (card == tmp) {
+                return tmp;
+            }
+            tmp = tmp.getNext();
+        }
+        return null;
+    }
 
     public Card search(Card card) {
         /*
@@ -78,6 +92,7 @@ public class LinkedList {
         }
         return null;
     }
+
 
     public Card getCardI(int i) {
         /*

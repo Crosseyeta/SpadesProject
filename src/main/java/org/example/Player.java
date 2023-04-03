@@ -4,7 +4,7 @@ public class Player {
     private String name;
     private int point;
     private int bids;
-    private PlayerDeck playerDeck;
+    private LinkedList playerDeck;
     // each Player's bids going to be determined beginning of the game;
     private int playOrder;
     private int roundWinCount;
@@ -26,7 +26,7 @@ public class Player {
     public Player(String name,int playOrder){
         this.name = name;
         this.playOrder = playOrder;
-        this.playerDeck = new PlayerDeck();
+        this.playerDeck = new LinkedList();
         //When first created each one of player's deck going to have zero card in it.And then 13 card will be distributed each one of them
 
     }
@@ -50,7 +50,7 @@ public class Player {
         this.point +=num;
     }
 
-    public PlayerDeck getPlayerDeck() {
+    public LinkedList getPlayerDeck() {
         //in order to control the player deck in GameController class.
         return this.playerDeck;
     }
@@ -72,6 +72,12 @@ public class Player {
         this.bids = bids;
     }
     public void useCard(int index){
+
+    }
+    public void addCard(Card card){
+        //@param Card card which is determined by the distribute function in the GameController
+        //In the beginning of the game each player's deck going to be determined by this and distribute function.
+        this.playerDeck.insertFirst(card);
 
     }
 

@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="Got stuck in distubite method. There is one stupid error and ı could not figure it out. TableController line 129 second for loop for k==1">
+    <list default="true" id="8f13a3bc-8110-40b4-b866-ddb08b73ff79" name="Changes" comment="ı dont know why but playerDeck and deck equalized in distribute method. I dont have any idea about it.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Bot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Bot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/LinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/PlayerDeck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/TableController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,6 +110,8 @@
       <workItem from="1680007995645" duration="10812000" />
       <workItem from="1680114387619" duration="6845000" />
       <workItem from="1680189089051" duration="22501000" />
+      <workItem from="1680298293223" duration="268000" />
+      <workItem from="1680543266825" duration="5352000" />
     </task>
     <task id="LOCAL-00001" summary="Starter">
       <created>1679254626950</created>
@@ -186,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680294722973</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ı dont know why but playerDeck and deck equalized in distribute method. I dont have any idea about it.">
+      <created>1680298332237</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1680298332237</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +226,8 @@
     <MESSAGE value="shuffle distribute and linkedlist logic implemented. Got stuck in shuffle and distribute.Also getIndex method not working sometimes." />
     <MESSAGE value="change method error solved." />
     <MESSAGE value="Got stuck in distubite method. There is one stupid error and ı could not figure it out. TableController line 129 second for loop for k==1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got stuck in distubite method. There is one stupid error and ı could not figure it out. TableController line 129 second for loop for k==1" />
+    <MESSAGE value="ı dont know why but playerDeck and deck equalized in distribute method. I dont have any idea about it." />
+    <option name="LAST_COMMIT_MESSAGE" value="ı dont know why but playerDeck and deck equalized in distribute method. I dont have any idea about it." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

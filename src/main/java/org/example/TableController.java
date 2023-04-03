@@ -99,6 +99,7 @@ public class TableController {
         //AFTER THE DISTRBITUON OF CARDS
         System.out.println("Please enter your bid by looking at your spades.(Enter int value)");
         player1.setBids(sc.nextInt());
+
         //Bots bids are complicated
 
 
@@ -118,25 +119,29 @@ public class TableController {
         System.out.println("ikinci for");
         for(int i = 0;i<13;i++){//may can be with switch case;
 
+            System.out.println(this.deck.getDeck().getCardI(14));
 
             if(k==0){
                 /*Card newCard = this.deck.getDeck().getCardI(k*13+i);
                 System.out.println(newCard);*/
-                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI((k*13)+i));
-                System.out.println(this.player1.getPlayerDeck().getPlayerDeckList().toString());
+                /*this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
+                System.out.println(this.player1.getPlayerDeck().toString());*/
+                System.out.println(this.deck.getDeck().toString()+" 127 ");
                 k++;
-            }if(k==1){
-                System.out.println(this.deck.getDeck().toString()+"çalış amk ");
+            }else if(k==1){
+                System.out.println(this.deck.getDeck().toString()+" çalış amk ");
                 System.out.println(this.deck.getDeck().getCardI(0));
-                this.player1.getPlayerDeck().addCard(this.deck.getDeck().getCardI(k*13+i));
+                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
                 k++;
+                System.out.println(this.deck.getDeck().toString()+" çalış amk ");
+
             }else if(k==2){
-                Card newCard = this.deck.getDeck().getCardI(k*13+i);
-                this.player1.getPlayerDeck().addCard(newCard);
+                Card newCard = this.deck.getDeck().getCardI((k*13)+i);
+                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
                 k++;
             }else if(k==3){
-                Card newCard = this.deck.getDeck().getCardI(k*13+i);
-                this.player1.getPlayerDeck().addCard(newCard);
+                Card newCard = this.deck.getDeck().getCardI((k*13)+i);
+                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
                 k= 0;
             }
         }
@@ -148,6 +153,7 @@ public class TableController {
 
     }
     private void startRound(){
+
         //starts round by distributing card to each player also controls to players point.
         //Going to check which round it is and also determine how many left(13 round must be)
     }
