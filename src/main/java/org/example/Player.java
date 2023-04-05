@@ -8,8 +8,16 @@ public class Player {
     // each Player's bids going to be determined beginning of the game;
     private int playOrder;
     private int roundWinCount;
+    private boolean lastWin;
 
 
+    public boolean isLastWin() {
+        return lastWin;
+    }
+
+    public void setLastWin(boolean lastWin) {
+        this.lastWin = lastWin;
+    }
 
     public int getRoundWinCount() {
 
@@ -21,6 +29,18 @@ public class Player {
         //@param roundwincount in order the set roundwincount to 0 after each set ends.
         this.roundWinCount = roundWinCount;
     }
+    public void startWith(){
+
+    }
+    public void showDeck(){
+        for(int i = 0;i<this.playerDeck.numberOfElements();i++){
+            System.out.println(i+" "+this.playerDeck.getCardI(i).getSuit() + " " +this.playerDeck.getCardI(i).getPower());
+        }
+    }
+
+
+
+
 
     public Player(){
         //for bot class
@@ -29,6 +49,7 @@ public class Player {
         this.name = name;
         this.playOrder = playOrder;
         this.playerDeck = new LinkedList();
+        this.lastWin = false ;
 
         //When first created each one of player's deck going to have zero card in it.And then 13 card will be distributed each one of them
 
@@ -74,15 +95,26 @@ public class Player {
         //@param int bids when the game starts each player must deal with some bids in order to start to game.
         this.bids = bids;
     }
-    public void useCard(int index){
 
-    }
     public void addCard(Card card){
         //@param Card card which is determined by the distribute function in the GameController
         //In the beginning of the game each player's deck going to be determined by this and distribute function.
         this.playerDeck.insertPlayerDeck(card);
 
     }
+    protected void deleteCardFDeck(int i){/*
+        @param index that we want to delete
+         */
+        if(i ==0){
+            this.playerDeck.deleteFirst();
+        }else{
+            Card prevCard = this.playerDeck.getCardI(i-1);
+            Card nextCard = this.playerDeck.getCardI(i+1);
+            prevCard.setNext(nextCard);
+            this.playerDeck.getCardI(i).setNext(null);
+        }
+    }
+
 
 
 }

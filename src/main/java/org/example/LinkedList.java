@@ -33,6 +33,7 @@ public class LinkedList {
         newCard.setNext(head);
         head = newCard;
     }
+
     public void insertPlayerDeck(Card newCard){
         /*
         @param which card that we want to insert to player's deck but without touching the next.
@@ -74,20 +75,7 @@ public class LinkedList {
     }
 
 
-    /*public Card searchSuit(Suit suit) {
-        /*
-         @param the value that we want to find in list
-         @return the node that include the value that we want
-         */
-        /*Card tmp = head;
-        while (tmp != null) {
-            if (card == tmp) {
-                return tmp;
-            }
-            tmp = tmp.getNext();
-        }
-        return null;
-    }*/
+
 
     public Card search(Card card) {
         /*
@@ -102,6 +90,20 @@ public class LinkedList {
             tmp = tmp.getNext();
         }
         return null;
+    }
+    public int searchSpade(){
+        /*
+        @return returns the value of how many spades that player have in his hand in order to set bids.
+         */
+        int count = 0;//Spade count
+        for(int i = 0 ;i<this.numberOfElements();i++){
+            String suitName = this.getCardI(i).getSuit().getName();
+            if(suitName.equals("Spade")){
+                count++;
+            }
+        }
+        return count;
+
     }
 
 
@@ -122,6 +124,7 @@ public class LinkedList {
 
         return null;
     }
+
 
     public int numberOfElements(){
         /*
@@ -162,10 +165,12 @@ public class LinkedList {
         StringBuilder result = new StringBuilder();
         Card tmp = head;
         while (tmp != null) {
-            result.append(tmp).append(" ");
+            result.append(tmp).append(" \n");
             tmp = tmp.getNext();
         }
         return result.toString();
     }
+
+
 
 }

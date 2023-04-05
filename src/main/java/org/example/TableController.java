@@ -1,6 +1,5 @@
 package org.example;
-import java.sql.SQLOutput;
-import java.util.LinkedList;
+
 import java.util.Scanner;
 
 
@@ -31,8 +30,8 @@ public class TableController {
     private Bot bot3;
     private TableDeck tableDeck;
     private Scanner sc ;
-    private LinkedList players;
-    public static boolean broken;//in order to control if it is game broken or not to. determine for the bots which card they are going to use.
+
+    public boolean broken;//in order to control if it is game broken or not to. determine for the bots which card they are going to use.
 
 
 
@@ -42,6 +41,9 @@ public class TableController {
         this.bot1 = new Bot("Bot1",2);
         this.bot2 = new Bot("Bot2",3);
         this.bot3 = new Bot("Bot3",4);
+        this.bot1.setLastWin(true);
+        this.tableDeck = new TableDeck();
+
 
         sc = new Scanner(System.in);
 
@@ -83,10 +85,14 @@ public class TableController {
     private void startSet(){
         //starts the set of the game(set means each game which played with initial 52 cards deck. Also, each set has 13 round)
         this.broken = false;
-        deck.shuffle();
+        this.deck.shuffle();
         distributeCards();
         setBids();
+
         startRound();
+
+
+
 
     }
     private void endSet(){
@@ -102,10 +108,13 @@ public class TableController {
         //AFTER THE DISTRBITUON OF CARDS
         System.out.println("Please enter your bid by looking at your spades.(Enter int value)");
         System.out.println(this.player1.getPlayerDeck().toString());
+        System.out.println("Your Bid:");
         player1.setBids(sc.nextInt());
+        bot1.BotAutoBid();
+        bot2.BotAutoBid();
+        bot3.BotAutoBid();
 
         //Bots bids are complicated
-
 
     }
     private void distributeCards(){
@@ -152,6 +161,16 @@ public class TableController {
 
     private void startRound(){
 
+        if(this.player1.isLastWin()){
+
+        }else if (this.bot1.isLastWin()) {
+            this.tableDeck.addCardToTable(this.bot1.startFirst());
+            this.bot2.useCard();
+        }else if (this.bot2.isLastWin()) {
+            bot2.startWith();
+        }else if (this.bot3.isLastWin()) {
+            bot3.startWith();
+        }
         //starts round by distributing card to each player also controls to players point.
         //Going to check which round it is and also determine how many left(13 round must be)
     }
@@ -171,6 +190,26 @@ public class TableController {
         //when setGameWinner function implemented just after it this function going to work and sets everything to the normal.
         //For example bids going to be deleted and also points of each player.
 
+    }
+    private boolean compareCards(LinkedList tableDeck,Card card){
+        /*
+        @param you gonna check the card if it proper the use by looking at the suit of it and also if it is spade and if game is broken or not.
+        @return if this card can be usable then returns true otherwise false
+         */
+        if(broken){
+
+        }else{
+            for(int i = 0;i<tableDeck.numberOfElements();i++){
+                if(tableDeck.getCardI(i).getSuit()!=card.getSuit()){
+                    System.out.println("Please use correct card of that part of correct suit.");
+
+                    return false;
+                }
+            }
+        }
+
+
+        return true;
     }
 
 
