@@ -33,6 +33,17 @@ public class LinkedList {
         newCard.setNext(head);
         head = newCard;
     }
+    public void insertPlayerDeck(Card newCard){
+        /*
+        @param which card that we want to insert to player's deck but without touching the next.
+         */
+        if (tail == null) {
+            tail = newCard;
+        }
+
+        newCard.setNext(head);
+        head = newCard;
+    }
 
     public void insertLast(Card newCard) {
 /*
@@ -63,12 +74,12 @@ public class LinkedList {
     }
 
 
-    public Card searchSuit(Suit suit) {
+    /*public Card searchSuit(Suit suit) {
         /*
          @param the value that we want to find in list
          @return the node that include the value that we want
          */
-        Card tmp = head;
+        /*Card tmp = head;
         while (tmp != null) {
             if (card == tmp) {
                 return tmp;
@@ -76,7 +87,7 @@ public class LinkedList {
             tmp = tmp.getNext();
         }
         return null;
-    }
+    }*/
 
     public Card search(Card card) {
         /*

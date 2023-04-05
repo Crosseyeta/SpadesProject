@@ -1,4 +1,6 @@
 package org.example;
+import java.sql.SQLOutput;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 
@@ -29,6 +31,7 @@ public class TableController {
     private Bot bot3;
     private TableDeck tableDeck;
     private Scanner sc ;
+    private LinkedList players;
     public static boolean broken;//in order to control if it is game broken or not to. determine for the bots which card they are going to use.
 
 
@@ -39,7 +42,9 @@ public class TableController {
         this.bot1 = new Bot("Bot1",2);
         this.bot2 = new Bot("Bot2",3);
         this.bot3 = new Bot("Bot3",4);
+
         sc = new Scanner(System.in);
+
 
 
         //Player1's name going to be selected by the user.
@@ -68,9 +73,7 @@ public class TableController {
 
         System.out.println("Welcome to the spade game.To start the game please write your username");
         this.player1.setName(sc.next());
-        //this.deck.shuffle();
-        this.deck.showAllDeck();
-        distributeCards();
+        startSet();
 
 
 
@@ -98,6 +101,7 @@ public class TableController {
         //when game starts all the player must bid his guess.
         //AFTER THE DISTRBITUON OF CARDS
         System.out.println("Please enter your bid by looking at your spades.(Enter int value)");
+        System.out.println(this.player1.getPlayerDeck().toString());
         player1.setBids(sc.nextInt());
 
         //Bots bids are complicated
@@ -108,50 +112,44 @@ public class TableController {
 
         //distributes 13 card every game in the beginning.
         //Takes card from Main Deck and distribute to each player's deck one by one(Because its already shuffled also going to distrbuted randomly)
-        // when distributing it going to take one card from 0-13 and then 13-26 , 26-39 , 39-52 with this way each player's deck be more complicated
-        int k = 0;
+        // its going to take one card form the head of deck and one card form tail of the card and it goes like this until there is no card.
+        Card cardTest = this.deck.getDeck().getCardI(0);
+        System.out.println(cardTest.toString());
+        System.out.println(this.deck.getDeck().numberOfElements());
 
-        System.out.println(this.deck.getDeck().toString());
-        for(int a = 0;a<15;a++){
-            System.out.println(this.deck.getDeck().getCardI(a));
+        for(int i = 0;i<13;i++){
+            //for player
+            Card newCard =  new Card(this.deck.getDeck().getCardI(i).getSuit(),this.deck.getDeck().getCardI(i).getPower());
+            this.player1.getPlayerDeck().insertFirst(newCard);
+
         }
-        System.out.println(this.deck.getDeck().getCardI(14));
-        System.out.println("ikinci for");
-        for(int i = 0;i<13;i++){//may can be with switch case;
-
-            System.out.println(this.deck.getDeck().getCardI(14));
-
-            if(k==0){
-                /*Card newCard = this.deck.getDeck().getCardI(k*13+i);
-                System.out.println(newCard);*/
-                /*this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
-                System.out.println(this.player1.getPlayerDeck().toString());*/
-                System.out.println(this.deck.getDeck().toString()+" 127 ");
-                k++;
-            }else if(k==1){
-                System.out.println(this.deck.getDeck().toString()+" çalış amk ");
-                System.out.println(this.deck.getDeck().getCardI(0));
-                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
-                k++;
-                System.out.println(this.deck.getDeck().toString()+" çalış amk ");
-
-            }else if(k==2){
-                Card newCard = this.deck.getDeck().getCardI((k*13)+i);
-                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
-                k++;
-            }else if(k==3){
-                Card newCard = this.deck.getDeck().getCardI((k*13)+i);
-                this.player1.addCard(this.deck.getDeck().getCardI((k*13)+i));
-                k= 0;
+        for(int i = 13;i<26;i++){
+            //for bot1
+            Card newCard =  new Card(this.deck.getDeck().getCardI(i).getSuit(),this.deck.getDeck().getCardI(i).getPower());
+            this.bot1.getPlayerDeck().insertFirst(newCard);
+        }
+        for(int i = 26;i<39;i++){
+            //for bot2
+            Card newCard =  new Card(this.deck.getDeck().getCardI(i).getSuit(),this.deck.getDeck().getCardI(i).getPower());
+            this.bot2.getPlayerDeck().insertFirst(newCard);
             }
+
+        for(int i = 39;i<52;i++){
+            //for bot3
+            Card newCard =  new Card(this.deck.getDeck().getCardI(i).getSuit(),this.deck.getDeck().getCardI(i).getPower());
+            this.bot3.getPlayerDeck().insertFirst(newCard);
         }
 
-        System.out.println(player1.getPlayerDeck().toString());
+
+
+
+
 
 
 
 
     }
+
     private void startRound(){
 
         //starts round by distributing card to each player also controls to players point.

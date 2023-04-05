@@ -21,33 +21,31 @@ public class Deck {
     this.club = new Suit("Club",0);
     this.heart = new Suit("Heart",0);
     for(int i = 0;i<13;i++){
-      deck.insertFirst(new Card(spade,i));
+      this.deck.insertFirst(new Card(spade,i));
     }
     for(int i = 0;i<13;i++){
-      deck.insertFirst(new Card(diamond,i));
+      this.deck.insertFirst(new Card(diamond,i));
     }
     for(int i = 0;i<13;i++){
-      deck.insertFirst(new Card(heart,i));
+      this.deck.insertFirst(new Card(heart,i));
     }
     for(int i = 0;i<13;i++){
-      deck.insertFirst(new Card(club,i));
+      this.deck.insertFirst(new Card(club,i));
     }
 
   }
   public void shuffle(){
     //this function shuffles the deck briefly.
     //by using linkedlist functions which are implemented in linkedlist class
-    //In this for look we can change 26 here it depends us in order to make more lucky concrete shuffle function we can increase this number but not much in order to be efficient
-    int range1 = (4 - 1) + 1;
-    int range2 = (13 - 1) + 1;
-    for(int i = 0 ;i<26;i++){
+    //In this for look we can change 26 here it depends on us in order to make more lucky concrete shuffle function we can increase this number but not much in order to be efficient
+    int range1 = 4;
+    int range2 = 13;
+    for(int i = 0 ;i<52;i++){
       //we are going to shuffle this by select two card in specific index of deck by giving them random index using random.
-      int a = (int)(Math.random() * range1) + 1;
-      int b = (int)(Math.random() * range1) + 1;
-      int c = (int)(Math.random() * range2) + 1;
-      int d = (int)(Math.random() * range2) + 1;
-
-      change(this.deck.getCardI(a*c-1),this.deck.getCardI(b*d-1));
+      int j = (int) (Math.random() * 52); // Get a random index out of 52
+      Card card1 =  this.deck.getCardI(i);
+      Card card2 = this.deck.getCardI(j);
+      change(card1,card2);
     }
 
 
@@ -69,9 +67,10 @@ public class Deck {
   public void showAllDeck(){
     int size  = this.deck.numberOfElements();
     for(int i = 0;i<size;i++){
-      System.out.println(deck.getCardI(i).toString());
+      System.out.println(this.deck.getCardI(i).toString());
     }
   }
+
 
 
 }

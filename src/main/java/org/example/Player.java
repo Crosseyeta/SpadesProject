@@ -9,6 +9,8 @@ public class Player {
     private int playOrder;
     private int roundWinCount;
 
+
+
     public int getRoundWinCount() {
 
         //@return roundwincount in order to determine is player done it bid's.
@@ -27,6 +29,7 @@ public class Player {
         this.name = name;
         this.playOrder = playOrder;
         this.playerDeck = new LinkedList();
+
         //When first created each one of player's deck going to have zero card in it.And then 13 card will be distributed each one of them
 
     }
@@ -77,7 +80,7 @@ public class Player {
     public void addCard(Card card){
         //@param Card card which is determined by the distribute function in the GameController
         //In the beginning of the game each player's deck going to be determined by this and distribute function.
-        this.playerDeck.insertFirst(card);
+        this.playerDeck.insertPlayerDeck(card);
 
     }
 
